@@ -62,7 +62,7 @@ $(document).ready(() => {
   function updateBooksByName({ name }) {
     $('.book-card').each((index, div) => {
       let bookTitle = $(div).find('.title').text();
-      if (!bookTitle.toLowerCase().includes(name)) {
+      if (!bookTitle.toLowerCase().includes(name.toLowerCase())) {
         $(div).hide();
       } else {
         $(div).show();
